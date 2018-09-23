@@ -7,13 +7,8 @@ services:
     command: mongod --noauth
   webapp:
     build: .
-    image: arjunsekar1991/tm-server:latest
+    image: arjunsekar1991/meanstackapp:latest
     depends_on:
       - "mongo"
     ports:
       - 4000:4000
-    volumes:
-       - appsystem:/usr/src/app
-volumes:
-  appsystem:
-    driver: local

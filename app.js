@@ -15,7 +15,7 @@ taskRoutes = require('./routes/tasks.routes');
 bodyParser = require('body-parser'),
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/tmdb').then(
+mongoose.connect('mongodb://mongo:27017/admin').then(
   () => {console.log('Database is connected') },
   err => { console.log('Can not connect to the database'+ err)}
 );
